@@ -16,7 +16,7 @@ Promise.all([
 
   // JOIN DATA → FLAT TABLE
   originalData = [];
-  classes.forEach(c => {
+  classes.forEach(c => { console.log(s.subject_id)
     schedules
       .filter(s => s.class_id === c.id)
       .forEach(s => {
