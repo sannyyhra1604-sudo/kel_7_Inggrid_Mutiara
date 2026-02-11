@@ -11,8 +11,8 @@ Promise.all([
   fetch('./data/lesson_rows.json').then(r => r.json())
 ]).then(([classes, schedules, teachers, lessons]) => {
 
-  const teacherById = Object.fromEntries(teachers.map(t => [t.id, t]));
-  const lessonById  = Object.fromEntries(lessons.map(l => [l.id, l]));
+  const teacherById = Object.fromEntries(teachers.map(t => [t.classes_id, t]));
+  const lessonById  = Object.fromEntries(lessons.map(l => [l.subject_id, l]));
 
   // JOIN DATA → FLAT TABLE
   originalData = [];
