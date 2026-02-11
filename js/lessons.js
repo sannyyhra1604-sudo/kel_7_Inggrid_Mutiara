@@ -12,7 +12,7 @@ Promise.all([
 ]).then(([lessons, schedules, teachers, classes]) => {
 
   const teacherById = Object.fromEntries(teachers.map(t => [t.id, t]));
-  const classById   = Object.fromEntries(classes.map(c => [c.class_id, c]));
+  const classById   = Object.fromEntries(classes.map(c => [c.id, c]));
   const lessonById  = Object.fromEntries(lessons.map(l => [l.teacher_id, l]));
 
   // JOIN DATA → FLAT TABLE
