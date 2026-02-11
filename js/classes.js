@@ -16,13 +16,13 @@ Promise.all([
 
   // JOIN DATA → FLAT TABLE
   originalData = [];
-  classes.forEach(c => { console.log(s.subject_id)
+  classes.forEach(c => { 
     schedules
       .filter(s => s.class_id === c.id)
       .forEach(s => {
         originalData.push({
           class: c.name,
-          lesson: lessonById[s.subject_id]?.subject || '-',
+          lesson: lessonById[s.teacher_id]?.subject || '-',
           teacher: teacherById[s.teacher_id]?.name || '-'
         });
       });
