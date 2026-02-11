@@ -17,7 +17,7 @@ Promise.all([
   allData = schedules.map(s => ({
     day: s.day,
     time: `${formatTime(s.time_start)} – ${formatTime(s.time_end)}`,
-    lesson: lessonById[s.lessons_id]?.subject || '-',
+    lesson: lessonById[s.teacher_id]?.subject || '-',
     teacher: teacherById[s.teacher_id]?.name || '-',
     class: classById[s.class_id]?.name || '-'
   }));
