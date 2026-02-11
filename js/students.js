@@ -5,7 +5,7 @@ let filteredData = [];
 
 // FETCH DATA
 Promise.all([
-  fetch('./data/students_rows.json').then(r => r.json()),
+  fetch('./data/student_rows.json').then(r => r.json()),
   fetch('./data/classes_rows.json').then(r => r.json())
 ]).then(([students, classes]) => {
 
