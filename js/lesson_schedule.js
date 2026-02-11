@@ -11,7 +11,7 @@ Promise.all([
 ]).then(([schedules, teachers, lessons, classes]) => {
 
   const teacherById = Object.fromEntries(teachers.map(t => [t.id, t]));
-  const lessonById  = Object.fromEntries(lessons.map(l => [l.id, l]));
+  const lessonById  = Object.fromEntries(lessons.map(l => [l.subject_id, l]));
   const classById   = Object.fromEntries(classes.map(c => [c.id, c]));
 
   allData = schedules.map(s => ({
