@@ -7,8 +7,8 @@ let filteredData = [];
 Promise.all([
   fetch('./data/classes_rows.json').then(r => r.json()),
   fetch('./data/lesson_schedule_rows.json').then(r => r.json()),
-  fetch('./data/teachers_rows.json').then(r => r.json()),
-  fetch('./data/lessons_rows.json').then(r => r.json())
+  fetch('./data/teacher_rows.json').then(r => r.json()),
+  fetch('./data/lesson_rows.json').then(r => r.json())
 ]).then(([classes, schedules, teachers, lessons]) => {
 
   const teacherById = Object.fromEntries(teachers.map(t => [t.id, t]));
